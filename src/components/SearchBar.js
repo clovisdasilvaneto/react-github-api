@@ -4,7 +4,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 
-const SearchBar = ({loaddingRequest, changeSearchInput, handleSearch}) => (
+const SearchBar = ({loaddingRequest, onSearchInputChanges, handleSearch}) => (
 	<form onSubmit={handleSearch}>
 		<TextField
 			autoFocus
@@ -12,7 +12,7 @@ const SearchBar = ({loaddingRequest, changeSearchInput, handleSearch}) => (
 			fullWidth={true}
 			id="text-field-controlled"
 			disabled={loaddingRequest}
-			onChange={changeSearchInput}
+			onChange={onSearchInputChanges}
 		/>
 		<RaisedButton type="submit" label="Search github user" fullWidth={true}/>
 		<br/>
@@ -22,7 +22,7 @@ const SearchBar = ({loaddingRequest, changeSearchInput, handleSearch}) => (
 
 SearchBar.propTypes = {
 	loaddingRequest: PropTypes.bool,
-	changeSearchInput: PropTypes.func.isRequired,
+	onSearchInputChanges: PropTypes.func.isRequired,
 	handleSearch: PropTypes.func.isRequired
 };
 

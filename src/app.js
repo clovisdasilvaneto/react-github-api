@@ -24,12 +24,12 @@ class App extends Component {
 		};
 		
 		this.username = '';
-		this.changeSearchInput = this.changeSearchInput.bind(this);
+		this.onSearchInputChanges = this.onSearchInputChanges.bind(this);
 		this.handleSearch = this.handleSearch.bind(this);
 		this.getRepos = this.getRepos.bind(this);
 	}
 	
-	changeSearchInput(e){
+	onSearchInputChanges(e){
 		this.username = e.target.value
 	}
 	
@@ -116,9 +116,9 @@ class App extends Component {
 	
 	handleSearch(e){
 		e.preventDefault();
-		
+
 		const endPoint = this.getGithubAPIURL;
-		
+
 		this.addLoaddingStatus();
 		this.makeRequest(endPoint).then(resp => this.setState({
 			userInfo: resp,
@@ -148,7 +148,7 @@ class App extends Component {
 				clickViewRepoAction={this.getRepos('repos')}
 				clickViewStarredAction={this.getRepos('starred')}
 				handleSearch={this.handleSearch}
-				changeSearchInput={this.changeSearchInput}
+				onSearchInputChanges={this.onSearchInputChanges}
 			/>
 		);
 	}

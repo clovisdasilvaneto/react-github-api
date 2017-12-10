@@ -18,8 +18,8 @@ const Repos = ({ title, iconClass, repos })=> (
 		{repos.data.map((repo, index)=> (
 			<div key={index}>
 				<ListItem
+					onClick={()=> location.href=repo.link}
 					primaryText={repo.name}
-					href={repo.html_url}
 					secondaryText={repo.description}
 				/>
 				

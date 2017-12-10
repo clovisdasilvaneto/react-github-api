@@ -40783,7 +40783,7 @@ var NavBar = function NavBar() {
 		title: 'Github User Informations',
 		iconClassNameRight: 'fa fa-github',
 		onRightIconButtonClick: function onRightIconButtonClick() {
-			return location.href = "http://github.com/clovisdasilvaneto/github-app";
+			return location.href = "https://github.com/clovisdasilvaneto/react-github-api";
 		}
 	});
 };

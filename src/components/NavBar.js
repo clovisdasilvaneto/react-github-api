@@ -9,7 +9,7 @@ const NavBar = () => (
 	<AppBar
 		title="Github User Informations"
 		iconClassNameRight="fa fa-github"
-		onRightIconButtonClick={()=>location.href="http://github.com/clovisdasilvaneto/github-app"}
+		onRightIconButtonClick={()=>location.href="https://github.com/clovisdasilvaneto/react-github-api"}
 	/>
 );
 

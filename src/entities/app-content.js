@@ -9,12 +9,12 @@ import SearchBar from '../components/SearchBar';
 import Repos from '../components/Repos';
 import Loadding from '../components/Loadding'
 
-const AppContent = ({ userInfo, repos, starred, handleSearch, changeSearchInput, clickViewRepoAction, clickViewStarredAction, loaddingRequest })=> (
+const AppContent = ({ userInfo, repos, starred, handleSearch, onSearchInputChanges, clickViewRepoAction, clickViewStarredAction, loaddingRequest })=> (
 	<div>
 		<NavBar />
 		
 		<div className="container-app">
-			<SearchBar loaddingRequest={loaddingRequest} changeSearchInput={changeSearchInput} handleSearch={handleSearch} />
+			<SearchBar loaddingRequest={loaddingRequest} onSearchInputChanges={onSearchInputChanges} handleSearch={handleSearch} />
 			
 			{!!userInfo &&
 				<UserInformations
@@ -41,7 +41,7 @@ AppContent.propTypes = {
 	repos: PropTypes.object,
 	starred: PropTypes.object,
 	handleSearch: PropTypes.func.isRequired,
-	changeSearchInput: PropTypes.func.isRequired,
+	onSearchInputChanges: PropTypes.func.isRequired,
 	clickViewRepoAction: PropTypes.func.isRequired,
 	clickViewStarredAction: PropTypes.func.isRequired
 };

@@ -35605,7 +35605,7 @@ var UserInformations = function UserInformations(_ref) {
 					className: 'user-repositories',
 					backgroundColor: '#ff9900c2',
 					hoverColor: '#f90',
-					label: 'View starred repos',
+					label: 'View starred repositories',
 					onClick: clickViewStarredAction,
 					icon: _react2.default.createElement(_FontIcon2.default, { className: 'fa fa-star', color: _colors.fullWhite }) })
 			),

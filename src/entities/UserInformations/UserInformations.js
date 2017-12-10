@@ -47,7 +47,7 @@ const UserInformations = ({ userInfo, clickViewRepoAction, clickViewStarredActio
 					className="user-repositories"
 					backgroundColor="#ff9900c2"
 					hoverColor="#f90"
-					label="View starred repos"
+					label="view starred repositories"
 					onClick={clickViewStarredAction}
 					icon={<FontIcon className="fa fa-star" color={fullWhite} />} />
 			</CardActions>

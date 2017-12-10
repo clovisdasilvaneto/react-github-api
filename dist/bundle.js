@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "630987ebf0a378ca389e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "330d5397b54146898717"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -35605,7 +35605,7 @@ var UserInformations = function UserInformations(_ref) {
 					className: 'user-repositories',
 					backgroundColor: '#ff9900c2',
 					hoverColor: '#f90',
-					label: 'View starred repositories',
+					label: 'view starred repositories',
 					onClick: clickViewStarredAction,
 					icon: _react2.default.createElement(_FontIcon2.default, { className: 'fa fa-star', color: _colors.fullWhite }) })
 			),
@@ -42931,8 +42931,10 @@ var Repos = function Repos(_ref) {
 				'div',
 				{ key: index },
 				_react2.default.createElement(_List.ListItem, {
+					onClick: function onClick() {
+						return location.href = repo.link;
+					},
 					primaryText: repo.name,
-					href: repo.html_url,
 					secondaryText: repo.description
 				}),
 				_react2.default.createElement(_Divider2.default, null)

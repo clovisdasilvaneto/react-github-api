@@ -38,7 +38,7 @@ class App extends Component {
 	}
 	
 	get getGithubAPIURL(){
-		return `http://api.github.com/users/${this.username}`;
+		return `https://api.github.com/users/${this.username}`;
 		
 	}
 	
